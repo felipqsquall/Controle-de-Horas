@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <script src="./assets/js/adiciona.js"></script>
+  <!--<script src="./assets/js/login.js"></script>-->
+  <title>Controle de Horas - OS</title>
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <img src="./assets/img/sankhya.svg" width="150">
+      </a>
+    </div>
+  </nav>
+
+  <h1 class="title has-text-centered">Controle de Horas</h1>
+
+  <div class="box">
+    <!--<div class="select is-rounded">
+      <select>
+        <option>Mês</option>
+        <option>Janeiro</option>
+        <option>Fevereiro</option>
+        <option>Março</option>
+        <option>Abril</option>
+        <option>Maio</option>
+        <option>Junho</option>
+        <option>Julho</option>
+        <option>Agosto</option>
+        <option>Setembro</option>
+        <option>Outubro</option>
+        <option>Novembro</option>
+        <option>Dezembro</option>
+      </select>
+    </div> -->
+    <div class="columns">
+      <div class="column is-one-fifth">
+        <label for="data">Data da Agenda</label>
+        <input name="data" class="input is-primary" type="date" placeholder="Data">
+      </div>
+      <div class="column is-one-fifth">
+        <label for="inicio">Hora Inicial</label>
+        <input name="inicio" class="input is-primary" type="time" placeholder="Hora Inicio">
+      </div>
+
+      <div class="column is-one-fifth">
+        <label for="intervalo">Intervalo</label>
+        <input name="intervalo" class="input is-primary" type="time" placeholder="Intervalo">
+      </div>
+      <div class="column is-one-fifth">
+        <label for="final">Hora Final</label>
+        <input name="final" class="input is-primary" type="time" placeholder="Hora Final">
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-one-fifth">
+        <label for="parceiro">Parceiro</label>
+        <input name="parceiro" class="input is-primary" type="text" placeholder="Parceiro">
+      </div>
+
+
+      <div class="column is-one-fifth">
+        <label for="OS">OS</label>
+        <input name="OS" class="input is-primary" type="number" placeholder="OS">
+      </div>
+
+      <div class="column">
+        <div class="buttons">
+          <button id="adiciona" class="button is-primary" data-form-button>Adicionar</button>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-three-quarters">
+        <textarea class="textarea is-primary" name="texto" id="texto" placeholder="Texto da OS"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="box">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Hora Inicio</th>
+          <th>Intervalo</th>
+          <th>Hora Final</th>
+          <th>Parceiro Atendido</th>
+          <th>OS</th>
+        </tr>
+      </thead>
+      <tbody data-list>
+        
+        
+
+      </tbody>
+    </table>
+  </div>
+  <script type="module" src="./main.js" ></script>
+</body>
+
+</html>
