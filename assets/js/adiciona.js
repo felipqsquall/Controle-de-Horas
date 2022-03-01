@@ -6,7 +6,7 @@ export const novoItem = (evento) => {
   const apontamento = JSON.parse(localStorage.getItem('Apontamento')) || []
   //const lista = document.querySelector('[data-list]')
   const inputdate = document.getElementsByName("data");
-  const date = inputdate[0].value
+  const date = moment(inputdate[0].value);
   const inputinicio = document.getElementsByName("inicio");
   const inicio = inputinicio[0].value
   const inputintervalo = document.getElementsByName("intervalo");
@@ -17,12 +17,12 @@ export const novoItem = (evento) => {
   const parceiro = inputparceiro[0].value;
   const inputos = document.getElementsByName("OS");
   const os = inputos[0].value;
-
+  const dataformatada = date.format('DD/MM/YYYY');
 
 
 
   const dados = {
-    dateFormatada,
+    dataformatada,
     inicio,
     intervalo,
     final,
@@ -42,11 +42,9 @@ export const novoItem = (evento) => {
     
 }
 
-export const Apontamento = ({dateFormatada, inicio, intervalo, final,parceiro, os}) =>{
+export const Apontamento = ({dataformatada, inicio, intervalo, final,parceiro, os}) => {
   const apontamento = document.createElement('tr')
-  apontamento.classList.add('apontamento')
-  const conteudo = `<td>${dateFormatada}</td> <td>${inicio}</td> <td>${intervalo}</td> <td>${final}</td> <td>${parceiro}</td> <td>${os}</td> <td><button class="button is-info is-small">Editar</button></td>`;
-
+  const conteudo = `<td>${dataformatada}</td> <td>${inicio}</td> <td>${intervalo}</td> <td>${final}</td> <td>${parceiro}</td> <td>${os}</td> <td><button class="button is-info is-small">Editar</button></td>`;
   apontamento.innerHTML = conteudo;
 
   return apontamento;
