@@ -17,7 +17,6 @@ export const novoItem = (evento) => {
   const parceiro = inputparceiro[0].value;
   const inputos = document.getElementsByName("OS");
   const os = inputos[0].value;
-  const dateFormatada = date.format('DD/MM/YYYY');
 
 
 
