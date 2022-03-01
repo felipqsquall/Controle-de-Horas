@@ -27,7 +27,7 @@ export const novoItem = (evento) => {
     intervalo,
     final,
     parceiro,
-    os
+    os,
   }
 
   const apontamentoAtualizado = [...apontamento, dados]
@@ -42,7 +42,7 @@ export const novoItem = (evento) => {
     
 }
 
-export const Apontamento = ({dataformatada, inicio, intervalo, final,parceiro, os}) => {
+export const Apontamento = ({dataformatada, inicio, intervalo, final, parceiro, os}) => {
   const apontamento = document.createElement('tr')
   const conteudo = `<td>${dataformatada}</td> <td>${inicio}</td> <td>${intervalo}</td> <td>${final}</td> <td>${parceiro}</td> <td>${os}</td> <td><button class="button is-info is-small">Editar</button></td>`;
   apontamento.innerHTML = conteudo;
