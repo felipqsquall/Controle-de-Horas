@@ -20,7 +20,6 @@ export const novoItem = (evento) => {
   const dataformatada = date.format('DD/MM/YYYY');
 
 
-
   const dados = {
     dataformatada,
     inicio,
